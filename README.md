@@ -2,7 +2,7 @@
 
 워드프레스 웹팩 적용
 
-참고 : (https://medium.com/q-software/webpack-4-wordpress-9cada8f2647){:target="_blank"}
+참고 : [Link](https://medium.com/q-software/webpack-4-wordpress-9cada8f2647)
 
 ```
 
