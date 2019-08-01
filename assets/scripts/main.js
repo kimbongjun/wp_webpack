@@ -1,7 +1,8 @@
 import "../styles/main.scss";
 // Scss
 import Header from "./Header";
+import * as utils from "./utils";
 
-import _ from "underscore";
+utils.add(1, 2); // 3
 
 export { Header };
