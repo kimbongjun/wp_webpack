@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const NonJsEntryCleanupPlugin = require("./non-js-entry-cleanup-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin");
 const {
   context,
   entry,
@@ -29,8 +30,25 @@ module.exports = options => {
     output: {
       path: path.resolve(outputFolder),
       publicPath: getPublicPath(publicFolder),
+      //filename: dev ? "[name].[hash].js" : "[name].[contenthash].js"
       filename: "[name].js"
     },
+    // optimization: {
+    //   runtimeChunk: {
+    //     name: "manifest"
+    //   },
+    //   splitChunks: {
+    //     cacheGroups: {
+    //       // default: false,
+    //       commons: {
+    //         test: /[\\/]node_modules[\\/]/,
+    //         name: "vendor",
+    //         chunks: "initial",
+    //         enforce: true
+    //       }
+    //     }
+    //   }
+    // },
     module: {
       rules: [
         {
@@ -86,6 +104,10 @@ module.exports = options => {
             new FriendlyErrorsWebpackPlugin()
           ]
         : [
+            // new ManifestPlugin({
+            //   fileName: "assets.json",
+            //   basePath: publicFolder + "/"
+            // }),
             new MiniCssExtractWebpackPlugin({
               filename: "[name].css"
             }),
