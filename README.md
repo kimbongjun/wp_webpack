@@ -3,6 +3,7 @@
 워드프레스 웹팩 적용
 
 ```
+참고 : (https://medium.com/q-software/webpack-4-wordpress-9cada8f2647, target="_blank")
 
 1. themes/테마이름/resources
 2. build 적용 시 assets 경로에 파일이 자동 생성된다.
