@@ -2,9 +2,14 @@
 
 워드프레스 웹팩 적용
 
+<<<<<<< HEAD
 ```
 참고 : (https://medium.com/q-software/webpack-4-wordpress-9cada8f2647){:target="_blank"}
+=======
+참고 : (https://medium.com/q-software/webpack-4-wordpress-9cada8f2647, target="_blank")
+>>>>>>> 95944980e92ff89e6a585c9ff55070898a6876c1
 
+```
 1. themes/테마이름/resources
 2. build 적용 시 assets 경로에 파일이 자동 생성된다.
 3. function.php
